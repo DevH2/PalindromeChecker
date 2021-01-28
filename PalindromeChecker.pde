@@ -17,8 +17,8 @@ public void setup()
 public boolean palindrome(String word)
 {
   //your code here
-  if( noSpaces(noCapitals(onlyLetters(word))).equals(reverse(noSpaces(noCapitals(onlyLetters(word))))) 
-      && numLetters(noSpaces(noCapitals(onlyLetters(word)))) == numLetters(reverse(noSpaces(noCapitals(onlyLetters(word))))) ){
+  String processedString = noSpaces(noCapitals(onlyLetters(word)));
+  if( processedString.equals(reverse(processedString)) && numLetters(processedString) == numLetters(reverse(processedString)) ){
     return true;
   }else {
     return false;
@@ -64,4 +64,5 @@ public int numLetters(String str){
   }
   return count;
 }
+
 
